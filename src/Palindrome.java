@@ -2,7 +2,7 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 /**
- * Created by stephaniejain on 8/1/16.
+ * Created by nishit jain on 8/1/16.
  */
 public class Palindrome {
 

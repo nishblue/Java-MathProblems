@@ -9,11 +9,16 @@ public class Palindrome {
 
      public static boolean isWordPalindrome(String inputString){
 
+         //Format inputstring
+         String formatedString=inputString.trim().toLowerCase().replaceAll("[-+.^:,' ]","");
+
+        // System.out.println("formatedString = " + formatedString);
+
          //Load string into a arraylist
 
-         List<Character> x = new ArrayList<>(inputString.length());
+         List<Character> x = new ArrayList<>(formatedString.length());
 
-         for(char tmp: inputString.toLowerCase().toCharArray()){
+         for(char tmp: formatedString.toCharArray()){
              x.add(tmp);
          }
 
@@ -92,6 +97,19 @@ public class Palindrome {
         System.out.println("Is combination of character of this word can form  a Palindrome? aaalll :"+ isCombinationOfWordFormPalindrome("aalll"));
         System.out.println("Is combination of character of this word can form  a Palindrome? civic :"+ isCombinationOfWordFormPalindrome("civic"));
         System.out.println("Is combination of character of this word can form  a Palindrome? ciivc :"+ isCombinationOfWordFormPalindrome("ciivc"));
+
+        System.out.println("Is this sentence a Palindrome? Lion oil :"+ isWordPalindrome("Lion oil"));
+        System.out.println("Is this sentence a Palindrome? Dog's god :"+ isWordPalindrome("Dog's god"));
+        System.out.println("Is this sentence a Palindrome? Madam, I’m Adam. :"+ isWordPalindrome("Madam, I’m Adam."));
+        System.out.println("Is this sentence a Palindrome? Taco cat :"+ isWordPalindrome("Taco cat"));
+        System.out.println("Is this sentence a Palindrome? Step on no Pets :"+ isWordPalindrome("Step on no Pets"));
+        System.out.println("Is this sentence a Palindrome? Wonton? Not now. :"+ isWordPalindrome("Wonton? Not now."));
+
+        System.out.println("Is this sentence a Palindrome? Yo banana boy :"+ isWordPalindrome("Yo banana boy"));
+        System.out.println("Is this sentence a Palindrome? Yo banana boys :"+ isWordPalindrome("Yo banana boys"));
+
+
+
 
 
     }

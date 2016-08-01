@@ -9,22 +9,25 @@ public class Palindrome {
 
      public static boolean isWordPalindrome(String inputString){
 
+         //Load string into a arraylist
+
          List<Character> x = new ArrayList<>(inputString.length());
 
          for(char tmp: inputString.toLowerCase().toCharArray()){
              x.add(tmp);
          }
 
+         //Copy original inputString
          List<Character> y = new ArrayList<>(x);
 
         Collections.reverse(x);
 
+        //Compare original and reverse version
         return x.equals(y);
     }
 
     public static boolean isCombinationOfWordFormPalindrome(String inputString) {
 
-        // Test if frequency of every character in string is even.
 
         //HashMap to store char frequency
         Map<Character, Integer> charFreq = new HashMap<>(inputString.length());
@@ -62,11 +65,11 @@ public class Palindrome {
 
 
         if(inputString.length()%2==0){
-            //if input string is even in length
+            //if input string is even in length then there should be no char with odd frequency
             return oddNr == 0;
 
         }else{
-            //if input string is odd in length
+            //if input string is odd in length then there should be exactly one char with odd frequency
             return oddNr==1 ;
 
         }
